@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Compras Online</title>
+</head>
+
+
+<body>
+    <main class="conteudo">
+        <section class="jogos">
+            <div class="titulo">
+                <h1 class="titulo">Jogos para Playstation 5 disponíveis:</h1>
+                <img class="imgtitulo" src="./img/controle.png" alt="controle">
+
+            </div>
+            <div class="teste1">
+            <form class="formulario">
+                <label class="campo-grupo">
+                    <div class="centralizado">
+                    <span class="selecao">Selecione o jogo desejado:</span>
+                </div>
+                    <div class="alinha-jogos">
+                    <select class="jogos-input" name="Jogos" id="listajogos" onchange="mostrarImagem()">
+                        <option value="selecione" selected disabled hidden>Selecione um jogo</option>
+                        <option value="godofwar"> God of War Ragnarok - R$193,99</option>
+                        <option value="horizon"> Horizon Forbidden West - R$109,90</option>
+                        <option value="re4"> Resident Evil 4 - R$359,00</option>
+                        <option value="spiderman2"> Spider Man 2 - R$349,00</option>
+                        <option value="tlou2"> The Last of Us 2 - R$259,90</option>
+                    </select>
+                </div>
+                </label>
+
+                <div id="imagemJogo"></div>
+
+                
+                <section class="parte-inferior">
+                    <label class="campo-grupo">
+                        <div class="grupo1">
+                            <div class="teste2">                        
+                            <span class="qtde">Quantidade</span>                            
+                            <div class="centralizado">
+                            <input class="quantidade-input" id="quantidade" type="number" placeholder="0">
+                            </div>
+                        </div>
+                    </label>
+
+                    <section class="action-buttons">
+                        <button onclick="adicionar()" type="button" class="botoes" id="botaoadd">Adicionar</button>
+                        <button onclick="limpar()" type="button" class="botoes" id="botao-limpar">Limpar</button>
+                    </section>
+                </div>
+                </section>
+            </form>
+        </div>
+        </section>
+
+        <section class="sacola-compras">
+            
+            <div class="sacola-titulo">
+                <img class="imgtitulo" src="./img/sacolaps5.png" alt="sacola de compras">
+                <h2 class="sacola">Produtos na sacola:</h2>
+            </div>
+
+            <section class="sacola-produtos" id="lista-produtos"></section>
+
+            <section class="total-produtos" id="total-pedido">
+                <p class="sacola-total">Total: R$<span> </span></p>
+                <div>
+                <h3 class="texto-logo">Desenvolvido por:</h3>
+                <img class="logo" src="./img/on2.png" alt="logo">
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
